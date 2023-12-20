@@ -1,0 +1,312 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Theme Toggler */
+#toggle-switch{
+    display: flex;
+    justify-content: end;
+    position: relative;
+    margin: 10px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 80px;
+    height: 45px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+#toggle-switch .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #2196F3;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 40px;
+}
+
+#toggle-switch .slider:before {
+    position: absolute;
+    content: "";
+    height: 36px;
+    width: 36px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+#toggle-switch input:checked + .slider{
+    background-color: black;
+}
+
+#toggle-switch input:checked+.slider:before {
+    background-color: grey;
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(36px);
+    transform: translateX(36px);
+}
+
+/* Header */
+header h1{
+    text-align: center;
+}
+
+/* Filter */
+#filter{
+    padding-top: 25px;
+}
+
+#filter label{
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+#filter-selection{
+    height: 30px;
+    width: 100px;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 5px;
+}
+
+/* Song Queue */
+#all-song{
+    width: 25vw;
+}
+#all-song h2{
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+#all-song .song-queue{
+    margin-left: 10px;
+}
+
+#song-search-bar{
+    height: 30px;
+    margin-left: 10px;
+    border-radius: 5px;
+    box-shadow: none;
+}
+
+#song-search-btn{
+    font-size: 14px;
+    margin: 0;
+}
+
+.close-btn{
+    background-color: red;
+    box-shadow: none;
+    border: 0px;
+    color: white;
+    padding: 7px;
+    border-radius: 5px;
+    margin: 0;
+    position: relative;
+    display: none;
+    font-size: 15px;
+}
+
+
+
+/* Song */
+.song{
+    position: relative;
+    background-color: #0b81bc;
+    width: 80%;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.song:hover{
+    cursor: pointer;
+    background-color: #03557e;
+}
+
+/* Song Card */
+#song-card{
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+}
+
+.song-info-container{
+    background-color: #0573ab;
+    height: 60%;
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    border-radius: 20px;
+    box-shadow: -1px -1px 5px 0.1px purple;
+}
+
+.song-info-container .song-name{
+    margin-left: 27px;
+    margin-bottom: 10px;
+}
+
+.song-info-container .artist-name {
+    margin-left: 27px;
+    margin-top: 10px;
+}
+
+.img-container{
+    width: 90%;
+    height: 70%;
+    border: 2px solid black;
+    margin: auto;
+    margin-top: 20px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+}
+
+.img-container img{
+    width: 100%;
+    height: 80%;
+}
+
+.audio-player{
+    text-align: center;
+}
+
+
+.control-container{
+    display: flex;
+    justify-content: center;
+}
+
+.btn{
+    padding: 10px;
+    font-size: 20px;
+    background-color: blue;
+    border-radius: 10px;
+    border: none;
+    margin: 10px;
+    color: white;
+}
+
+#playlist-btn{
+    width: 50%;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.btn:hover{
+    cursor: pointer;
+    background-color: rgb(238, 86, 238);
+    transition: 0.5s;
+}
+
+main{
+    display:flex;
+    justify-content: space-between;
+}
+
+.card{
+    background-color: #6bb7de;
+    border-radius: 10px;
+    box-shadow: -1px -1px 5px 0.1px purple;
+}
+
+.height{
+    height: 100vh;
+    
+}
+
+
+/* Playlist */
+.playlist-container{
+    height: 90%;
+    width: 25vw;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.playlist-container h3{
+    margin: 15px 0px 15px 0px;
+    font-size: 22px;
+}
+
+.search-bar{
+    height: 40px;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+
+
+#playlist{
+    height: 100vh;
+    overflow: hidden;
+}
+
+.playlist{
+    background-color: #0b81bc;
+    width: 80%;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+    overflow: hidden;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.playlist:hover {
+    cursor: pointer;
+    background-color: #03557e;
+}
+
+.delete-btn {
+    background-color: transparent;
+    border-radius: 5px;
+    border: 0px;
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    color: white;
+}
+
+.delete-btn:hover{
+    cursor: pointer;
+}
+
+#playlist-search-bar {
+    height: 30px;
+    margin-left: 10px;
+    border-radius: 5px;
+    box-shadow: none;
+}
+
+#playlist-search-btn {
+    font-size: 14px;
+    margin: 0;
+}
+
+
+

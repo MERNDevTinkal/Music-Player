@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://kit.fontawesome.com/1e4325dabb.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div id="toggle-switch">
+            <label class="switch">
+                <input class="check-box" type="checkbox">
+                <!-- Light -->
+                <span class="slider"></span>
+                <!-- Dark -->
+            </label>
+        </div>
+        <h1>Music Player</h1>
+    </header>
+    <main>
+        <div id="all-song" class="card height">
+            <div id="filter">
+                <label>
+                    Filter By genre:
+                    <select id="filter-selection"></select>
+                </label>
+            </div>
+            <h2>All Songs</h2>
+            <form class="song-search">
+                <input type="text" id="song-search-bar" class=".search-bar" placeholder="Search Song">
+                <button type="submit" id="song-search-btn" class="btn"><i
+                        class="fa-solid fa-magnifying-glass"></i></button>
+                <button type="button" id="close-btn" class="close-btn"><i class="fa-solid fa-xmark"></i></button>
+            </form>
+            <div class="song-queue">
+            </div>
+        </div>
+        <div id="song-card" class="card height">
+            <div class="song-info-container">
+                <div class="img-container">
+                    <img class="song-img" src="img/shape of you.jpg" alt="Shape of you">
+                </div>
+                <h2 class="song-name">Shape of You</h2>
+                <h4 class="artist-name">Ed Shereen</h4>
+            </div>
+            <div class="audio-player"><audio class="audio-controls" src="songs/Stay.weba" controls></audio></div>
+            <div class="control-container">
+                <button type="button" id="prev" class="btn"><i
+                        class="fa-solid fa-caret-left"></i>&nbsp;Previous</button>
+                <button type="button" id="next" class="btn">Next&nbsp;<i class="fa-solid fa-caret-right"></i></button>
+
+            </div>
+            <button type="button" id="playlist-btn" class="btn"><i class="fa-solid fa-list"></i>&nbsp;Add To
+                Playlist</button>
+        </div>
+        <div id="playlist" class="height">
+            <form class="search-container">
+                <input type="text" id="playlist-input" class="search-bar" placeholder="Enter Playlist Name">
+                <button type="submit" id="submit-btn" class="btn">Create Playlist</button>
+            </form>
+            <div class="playlist-container card">
+                <h3>Current Playlist</h3>
+                <div class="current-playlist">
+
+                </div>
+                <h3>All Playlist</h3>
+                <form class="playlist-search">
+                    <input type="text" id="playlist-search-bar" class=".search-bar" placeholder="Search Song">
+                    <button type="submit" id="playlist-search-btn" class="btn"><i
+                            class="fa-solid fa-magnifying-glass"></i></button>
+                    <button type="button" id="playlist-close-btn" class="close-btn"><i
+                            class="fa-solid fa-xmark"></i></button>
+                </form>
+                <div class="all-playlist">
+
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
